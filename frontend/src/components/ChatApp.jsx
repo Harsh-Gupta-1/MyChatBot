@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-
+import API_URL from '../api';
 const Chatbot = () => {
   const [messages, setMessages] = useState([
     { text: "Hello! How can I help you?", sender: "bot" },
@@ -27,7 +27,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/chat", {
+      const response = await axios.post(`${API_URL}/api/chat`, {
         userID: "12345",
         message: input,
       });
