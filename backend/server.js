@@ -29,6 +29,9 @@ mongoose.connect(process.env.MONGO_URI).then(() => console.log("MongoDB Connecte
 // Mistral API Configuration
 const MISTRAL_API_URL = "https://api.mistral.ai/v1/chat/completions";
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Harsh's Chat API!");
+})
 app.post("/api/chat", async (req, res) => {
   try {
     const { userID, message } = req.body;
