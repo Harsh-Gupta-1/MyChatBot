@@ -5,7 +5,7 @@ import API_URL from '../api';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
-    { text: "Hello, I see that you are worried, share your problem with me, I am happy to help you", sender: "bot" },
+    { text: "Hello, how may I help you😊", sender: "bot" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
