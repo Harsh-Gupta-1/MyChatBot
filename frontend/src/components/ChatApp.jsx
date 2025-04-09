@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import API_URL from '../api';
 const Chatbot = () => {
   const [messages, setMessages] = useState([
-    { text: "Hello! How can I help you?", sender: "bot" },
+    { text: "This ChatBot is made by Harsh Gupta. How may I help you?", sender: "bot" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
