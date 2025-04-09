@@ -5,7 +5,7 @@ import API_URL from '../api';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
-    { text: "Hello, how may I help you?", sender: "bot" },
+    { text: "Hello, I see that you are worried, share your problem with me, I am happy to help you", sender: "bot" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -47,13 +47,13 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="flex flex-col flex-1 w-full bg-white overflow-hidden">
-      {/* Chat Container */}
+    <div className="flex flex-col flex-1 h-full w-full bg-white">
+      {/* Chat Container - Adjusts height to leave room for input bar */}
       <div
         ref={chatContainerRef}
-        className="flex-1 overflow-y-auto p-3 md:p-4 flex flex-col"
+        className="flex-1 overflow-y-auto pb-4"
       >
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto p-3 md:p-4">
           {messages.map((msg, index) => (
             <div
               key={index}
@@ -84,8 +84,8 @@ const Chatbot = () => {
         </div>
       </div>
 
-      {/* Input Bar - Fixed at bottom */}
-      <div className="border-t border-gray-200 p-3 md:p-4 bg-white">
+      {/* Fixed Input Bar at bottom */}
+      <div className="border-t border-gray-200 bg-white p-3 md:p-4 sticky bottom-0 left-0 right-0 w-full">
         <div className="flex items-center w-full max-w-4xl mx-auto">
           <input
             type="text"
