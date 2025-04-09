@@ -1,8 +1,9 @@
-import ChatApp from "./components/ChatApp"
-
+import ChatApp from "./pages/ChatApp"
+import Navbar from "./components/Navbar"; 
 function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-100">
+    <div className="flex flex-col h-screen">
+      <Navbar />
       <ChatApp />
     </div>
   );
